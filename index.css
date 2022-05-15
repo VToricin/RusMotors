@@ -1,0 +1,52 @@
+.myText {
+  font-weight: 300;
+}
+
+.paddingForRow {
+  padding: 10px 10px;
+}
+
+body {
+  position: fixed;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(21, 21, 21);
+  background-image: url(./images/osome.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+}
+@media (max-width: 1200px) {
+  body {
+    background-size: auto;
+  }
+}
+
+.my_overlayer {
+  height: 80vh;
+}
+
+.mainPage_redirect {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.redirect_link {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  background-color: rgb(246, 246, 246);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0px 0px 6px 3px rgba(32, 33, 36, 0.48);
+  transition: 300ms ease;
+}
+
+.redirect_link:hover {
+  background-color: white;
+  transition: ease 300ms;
+  box-shadow: inset 0px 0px 4px 1px rgba(32, 33, 36, 0);
+}/*# sourceMappingURL=index.css.map */
