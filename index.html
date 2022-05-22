@@ -4,46 +4,66 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,200;8..144,300;8..144,400&display=swap" rel="stylesheet">
     <title>Русские двигатели</title>
-    <link href="./mainCss/bootstrap.min.css" rel="stylesheet" >
+    
     <link rel="stylesheet" href="index.css">
     
 </head>
 <body>
-    
-    <header>
-        <div class="container">
-            <div class="row paddingForRow">
-                
-                    <div class="col-md-6 col-sm-12 header_phone">
-                        <h1 class=" text-center text-md-start  text-uppercase text-white myText">русские двигатели</h1>
-                    </div>
-                    <div class="col-md-6 col-sm-12 header_name text-md-right">
-                        <h1 class=" text-center text-md-end text-uppercase text-white myText" >8-123-456-78-90</h1>
-                    </div>
-                
-            </div>
-        </div>
+    <header>    
+        <div class="headerInfoWrapper">
+            <div class="companyNameDiv"><p>РУССКИЕ ДВИГАТЕЛИ</p></div>
+            <div class="companyPhoneDiv"><p>+7-123-456-78-90</p></div>  
+        </div>    
     </header>
     <section class="start">
-        <div class="container ">
-            <div class="row my_overlayer">   
-                <div class="col-md-4 col-sm-12 mainPage_redirect">
-                    <a href="" class="redirect_link"></a>
-                </div>
-                <div class="col-md-4 col-sm-12 mainPage_redirect">
-                    <a href="" class="redirect_link"></a>
-                </div>
-                <div class="col-md-4 col-sm-12 mainPage_redirect">
-                    <a href="" class="redirect_link"></a>
-                </div>
-                
-
-            </div>
-        </div>
-    </section>
+        <div class="startContentContainer">
         
+            <p class = "mainParagraph">
+                Здесь Вы можете найти двигатели отечественного производства Тутаевского и Ярославского моторных заводов, а также запасные части для этих двигателей.
+            </p>
+
+            <div class="brandSection">
+                <div class="startImgContainer"><img class="YaMZ brandElement" src="./images/yamz.jpg"></div>
+                <div class="startImgContainer"><img class="TMZ brandElement" src="./images/tmz.jpg"></div>
+            </div>
+            
+            <div class="swipeButton">
+                <div class="leftPartSwipe swiper"></div>
+                <div class="rightPartSwipe swiper"></div>
+            </div>
+        </div> 
+    </section>
+     <section class="sectionYaMZ">
+            <div class="sectionYaMZcontainer">
+                <p class="YaMZName">ЯРОСЛАВСКИЙ МОТОРНЫЙ ЗАВОД</p>
+                <div class="YamzDescription">
+                    <img src="./images/yamz2.jpg" alt="">
+                    <p>Продукция Ярославского моторного завода широко используется на коммерческой технике самых разных типов, средние и тяжелые дизельные двигатели в рядном и V-образном исполнении мощностью 120—800 л. с. а так же КПП, сцепления и полная гамма зап.частей. </p>
+                </div>
+                <div class="toDownloadYaMZ">
+                    <a href="">
+                        <div class="inStock toDownloadLinks">
+                            <img src="" alt="">
+                            <p>Продукция в наличии</p>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="catalog toDownloadLinks">
+                            <img src="" alt="">
+                            <p>Перейти в каталог</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+     </section>   
+
+     <section class="sectionTMZ">
+        
+    </section>  
     
-    <script src="./js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

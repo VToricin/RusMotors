@@ -1,15 +1,62 @@
 
+$smallSize:767px;
+$fontConst: 'Roboto Flex', sans-serif;
+$desktopSize:1024px;
 
 
-.myText{
-    font-weight: 300;
-}
-.paddingForRow{
-    padding: 10px 10px;
-}
+@import "./mainCss/sectionTMZ.scss";
+@import "./mainCss/sectionYaMZ.scss";
+
 body{
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+    p{
+        margin: 10px 0px;
+    }
+}
+header{
+    width: 100%;
+    z-index: 15;
+    background-color: #000000b5;
     position: fixed;
-    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: rgb(214, 214, 214);
+    font-family: $fontConst;
+    width: 100%;
+
+    .headerInfoWrapper{
+        width: 1024px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @media(max-width:$smallSize){
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            font-size: 23px;
+            
+        }
+
+    }
+    
+    p{
+        margin: 2px 2px;
+    }
+
+}
+
+.start{
+    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     width:100vw;
     height: 100vh;
     background-color: rgb(21, 21, 21);
@@ -18,37 +65,123 @@ body{
     background-size:cover;
     background-position-x: center;
     @media (max-width:1200px) { 
-        background-size:auto;
+        background-size:cover;
+        height: 100vh;
         
+    }
+    .mainParagraph{
+        
+        font-size: 25px;
+        color: rgb(197, 197, 197);
+        margin: 150px 100px 110px;
+        text-align: center;
+        font-weight: 300;
+        font-family: $fontConst;
+        @media (max-width: $smallSize){
+            font-size: 15px;
+            margin: 65px 10px 0px;
+            
+        }
     }
 
 }
-
-.my_overlayer{
-    height: 80vh;
-}
-.mainPage_redirect{
+.startContentContainer{ 
+    font-family: $fontConst;
+    width: $desktopSize;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    
-    
-    
-}
-.redirect_link{
-    width: 170px;
-    height: 170px;
-    border-radius: 50%;
-    background-color: rgb(246, 246, 246);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: inset 0px 0px 6px 3px rgb(32 33 36 / 48%);
-    transition: 300ms ease;
+    height: 100vh;
+    justify-content: space-between;
+    @media (max-width:$desktopSize) {
+        width: 98%;
+    }
 
+    @media(max-width:$smallSize){
+        flex-direction: column;
+        
+        width: 98%;
+    }
+    
+    .brandSection{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        @media(max-width:$smallSize){
+            flex-direction: column;
+            
+            width: 98%;
+        }
+
+        .brandElement{
+            width: 180px;
+            height: 180px;
+            
+            border-radius: 50%;
+            
+            transition: 300ms ease;
+            @media(max-width:$smallSize){
+                flex-direction: column;
+                
+            }
+            
+            &:hover{
+                width: 190px;
+                height: 190px;
+                transition: 300ms ease;
+            }
+
+        }
+        
+        .startImgContainer{
+            width: 210px;
+            height: 210px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            border-radius: 50%;
+            
+            transition: 300ms ease;
+            @media(max-width:$smallSize){
+                width: 190px;
+                height: 190px;
+                margin-top: 30px;
+            }
+        }
+
+        
+        
+    }
 }
-.redirect_link:hover{
-    background-color: white;
-    transition: ease 300ms;
-    box-shadow: inset 0px 0px 4px 1px rgb(32 33 36 / 0%);
+.swipeButton{
+    width: 100%;
+    height: 100px;
+    position: relative;
+    margin-top: 15px;
+
+    .swiper{
+        width: 50px;
+        height: 2px;
+        position: absolute;
+        background-color: white;
+    }
+    .leftPartSwipe{
+
+        left: 49.9%;
+        transform: rotate(-15deg);
+        @media(max-width:$smallSize){
+            left: 49.5%;
+            
+        }
+    }
+    .rightPartSwipe{
+        right: 49.9%;
+        transform: rotate(15deg);
+        @media(max-width:$smallSize){
+            right: 49.5%;
+            
+        }
+    }
 }
