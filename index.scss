@@ -7,6 +7,11 @@ $desktopSize:1024px;
 @import "./mainCss/sectionTMZ.scss";
 @import "./mainCss/sectionYaMZ.scss";
 
+html{
+    scroll-behavior: smooth;
+}
+
+
 body{
     margin: 0px;
     display: flex;
@@ -156,10 +161,12 @@ header{
     }
 }
 .swipeButton{
-    width: 100%;
+    width: 100px;
     height: 100px;
     position: relative;
     margin-top: 15px;
+    cursor: pointer;
+    
 
     .swiper{
         width: 50px;
@@ -169,19 +176,33 @@ header{
     }
     .leftPartSwipe{
 
-        left: 49.9%;
+        left: 49.3%;
         transform: rotate(-15deg);
-        @media(max-width:$smallSize){
-            left: 49.5%;
-            
-        }
+        animation: swipeButton 0.9s linear infinite;
+
+        
     }
     .rightPartSwipe{
-        right: 49.9%;
+        right: 49.3%;
         transform: rotate(15deg);
-        @media(max-width:$smallSize){
-            right: 49.5%;
-            
-        }
+        animation: swipeButton 0.9s linear infinite;
+        
+    }
+}
+
+@keyframes swipeButton{
+    0%{
+        top:10px;
+        opacity: 0%;
+    }
+
+    50%{
+        top:20px;
+        opacity: 50%;
+    }
+
+    100%{
+        top: 30px;
+        opacity: 0%;
     }
 }

@@ -98,6 +98,10 @@
   background-color: white;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0px;
   display: flex;
@@ -239,10 +243,11 @@ header p {
 }
 
 .swipeButton {
-  width: 100%;
+  width: 100px;
   height: 100px;
   position: relative;
   margin-top: 15px;
+  cursor: pointer;
 }
 .swipeButton .swiper {
   width: 50px;
@@ -251,20 +256,44 @@ header p {
   background-color: white;
 }
 .swipeButton .leftPartSwipe {
-  left: 49.9%;
+  left: 49.3%;
   transform: rotate(-15deg);
-}
-@media (max-width: 767px) {
-  .swipeButton .leftPartSwipe {
-    left: 49.5%;
-  }
+  -webkit-animation: swipeButton 0.9s linear infinite;
+          animation: swipeButton 0.9s linear infinite;
 }
 .swipeButton .rightPartSwipe {
-  right: 49.9%;
+  right: 49.3%;
   transform: rotate(15deg);
+  -webkit-animation: swipeButton 0.9s linear infinite;
+          animation: swipeButton 0.9s linear infinite;
 }
-@media (max-width: 767px) {
-  .swipeButton .rightPartSwipe {
-    right: 49.5%;
+
+@-webkit-keyframes swipeButton {
+  0% {
+    top: 10px;
+    opacity: 0%;
+  }
+  50% {
+    top: 20px;
+    opacity: 50%;
+  }
+  100% {
+    top: 30px;
+    opacity: 0%;
+  }
+}
+
+@keyframes swipeButton {
+  0% {
+    top: 10px;
+    opacity: 0%;
+  }
+  50% {
+    top: 20px;
+    opacity: 50%;
+  }
+  100% {
+    top: 30px;
+    opacity: 0%;
   }
 }/*# sourceMappingURL=index.css.map */
