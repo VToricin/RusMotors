@@ -2,8 +2,90 @@
   width: 100vw;
   height: 100vh;
   background: linear-gradient(#355b6c, rgb(37, 37, 37));
-  top: 100vh;
-  z-index: 11;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.sectionTMZ .sectionYaMZcontainer {
+  height: 100vh;
+  width: 1024px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.sectionTMZ .sectionYaMZcontainer .YaMZName {
+  font-size: 32px;
+  font-family: "Roboto Flex", sans-serif;
+  width: 100%;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .sectionTMZ .sectionYaMZcontainer .YaMZName {
+    font-size: 22px;
+  }
+}
+.sectionTMZ .sectionYaMZcontainer .YamzDescription {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 767px) {
+  .sectionTMZ .sectionYaMZcontainer .YamzDescription {
+    flex-direction: column;
+  }
+}
+.sectionTMZ .sectionYaMZcontainer .YamzDescription img {
+  width: 500px;
+  border-radius: 10px;
+  margin-right: 25px;
+}
+@media (max-width: 767px) {
+  .sectionTMZ .sectionYaMZcontainer .YamzDescription img {
+    width: 99%;
+    margin: 0px 5px;
+  }
+}
+.sectionTMZ .sectionYaMZcontainer .YamzDescription p {
+  font-size: 20px;
+  font-family: "Roboto Flex", sans-serif;
+  text-align: right;
+}
+@media (max-width: 767px) {
+  .sectionTMZ .sectionYaMZcontainer .YamzDescription p {
+    text-align: center;
+    font-size: 15px;
+    width: 90%;
+  }
+}
+.sectionTMZ .sectionYaMZcontainer .toDownloadYaMZ {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.sectionTMZ .sectionYaMZcontainer .toDownloadYaMZ a {
+  text-decoration: none;
+}
+.sectionTMZ .sectionYaMZcontainer .toDownloadYaMZ .toDownloadLinks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.sectionTMZ .sectionYaMZcontainer .toDownloadYaMZ .toDownloadLinks p {
+  text-decoration: none;
+  color: white;
+  font-family: "Roboto Flex", sans-serif;
+}
+.sectionTMZ .sectionYaMZcontainer .toDownloadYaMZ .toDownloadLinks img {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: white;
 }
 
 .sectionYaMZ {
@@ -96,10 +178,6 @@
   height: 100px;
   border-radius: 10px;
   background-color: white;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 body {
