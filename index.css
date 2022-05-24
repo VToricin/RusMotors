@@ -180,6 +180,10 @@
   background-color: white;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0px;
   display: flex;
